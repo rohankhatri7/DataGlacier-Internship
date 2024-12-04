@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wine Quality Prediction</title>
+</head>
+<body>
+    <h1>Wine Quality Prediction</h1>
+
+    <form method="POST" action="/predict">
+        <label for="alcohol">Alcohol:</label>
+        <input type="number" name="alcohol" id="alcohol"><br><br>
+
+        <label for="malic_acid">Malic Acid:</label>
+        <input type="number" name="malic_acid" id="malic_acid"><br><br>
+
+        <label for="ash">Ash:</label>
+        <input type="number" name="ash" id="ash"><br><br>
+
+        <label for="alcalinity_of_ash">Alcalinity of Ash:</label>
+        <input type="number" name="alcalinity_of_ash" id="alcalinity_of_ash"><br><br>
+
+        <label for="magnesium">Magnesium:</label>
+        <input type="number" name="magnesium" id="magnesium"><br><br>
+
+        <label for="total_phenols">Total Phenols:</label>
+        <input type="number" name="total_phenols" id="total_phenols"><br><br>
+
+        <label for="flavanoids">Flavanoids:</label>
+        <input type="number" name="flavanoids" id="flavanoids"><br><br>
+
+        <label for="nonflavanoid_phenols">Nonflavanoid Phenols:</label>
+        <input type="number" name="nonflavanoid_phenols" id="nonflavanoid_phenols"><br><br>
+
+        <label for="proanthocyanins">Proanthocyanins:</label>
+        <input type="number" name="proanthocyanins" id="proanthocyanins"><br><br>
+
+        <label for="color_intensity">Color Intensity:</label>
+        <input type="number" name="color_intensity" id="color_intensity"><br><br>
+
+        <label for="hue">Hue:</label>
+        <input type="number" name="hue" id="hue"><br><br>
+
+        <label for="od280/od315_of_diluted_wines">OD280/OD315 of diluted wines:</label>
+        <input type="number" name="od280/od315_of_diluted_wines" id="od280/od315_of_diluted_wines"><br><br>
+
+        <label for="proline">Proline:</label>
+        <input type="number" name="proline" id="proline"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if rfc_prediction %}
+        <h2>Prediction: {{ rfc_prediction }}</h2>
+    {% endif %}
+</body>
+</html>
