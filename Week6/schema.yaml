@@ -1,0 +1,17 @@
+columns:
+- FoodID
+- Name
+- Category
+- Cuisine
+- Calories
+- IsVegetarian
+- Price
+- Currency
+- Rating
+dataset_name: file
+file_name: /Users/rohankhatri/Desktop/foods_large.csv
+file_type: csv
+outbound_delimiter: '|'
+separator: ','
+skip_leading_rows: 1
+table_name: edsurv
